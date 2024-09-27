@@ -24,11 +24,11 @@ public class BalanceCalculator
     public static void Main(string[] args)
     {
         Console.WriteLine(
-            "Welcome to Balance Calculator!: Enter an amount (will be rounded off to 2 digits in decimals)");
+            "Welcome to Balance Calculator!: Enter the user given amount in \u00a3 (will be rounded off to 2 digits in decimals)");
         double amount =
             Math.Round(double.Parse(Console.ReadLine() ?? string.Empty), 2);
 
-        Console.Write("Enter an Product amount");
+        Console.Write("Enter an Product amount in \u00a3");
 
         double productAmount =
             Math.Round(double.Parse(Console.ReadLine() ?? string.Empty), 2);
@@ -36,7 +36,7 @@ public class BalanceCalculator
         var res = Calculate(amount, productAmount);
         foreach (var item in res)
         {
-            Console.WriteLine($"{item.Value}X {item.Key}");
+            Console.WriteLine($"{item.Value}X {item.Key}\u00a3");
         }
         Console.WriteLine("Thank You.!!!");
     }
